@@ -102,7 +102,7 @@ nav a.nav-link.active::before {
   width: 80%;
 }
 .navbar-scroll {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.299);
 }
 nav .navbar-toggler {
   border: none;
