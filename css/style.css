@@ -1,0 +1,546 @@
+/* GLOBAL SECTION */
+:root {
+  --main-color: #000000;
+  --second-color: #ffffff;
+  --par-color: #748182;
+  --bg-one: #ffffff;
+  --bg-two: #f7f7f7;
+  --bg-three: #5b5b5b;
+  --bg-layer: #ffffff;
+  --heading-fonts: "Montserrat", sans-serif;
+  --second-fonts: "Poppins", sans-serif;
+  --animation-duration: 600ms;
+  scroll-padding-top: 5.1563rem;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #748182;
+  color: white;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-fonts);
+}
+body {
+  font-family: var(--second-fonts);
+}
+a {
+  all: unset;
+  color: inherit;
+  cursor: pointer;
+}
+p {
+  color: var(--par-color);
+  line-height: 1.5;
+  font-size: 1.125rem;
+}
+.main-heading h2::after {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 77%;
+  left: -0.3125rem;
+  top: 0.875rem;
+  background-image: url(../img/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
+.Bshadow {
+  box-shadow: 0rem 0.625rem 1.875rem -0.5rem rgba(0, 0, 0, 0.1);
+}
+.B2shadow {
+  box-shadow: 0rem 0.125rem 0.4375rem rgba(0, 0, 0, 0.15) inset;
+}
+
+/* NAV-BAR */
+@media (min-width: 62rem) {
+  nav .navbar-collapse {
+    flex-grow: 0;
+  }
+  nav .nav-item a.nav-link,
+  nav .nav-item a.nav-link.active {
+    color: white;
+  }
+}
+@media (max-width: 61.9375rem) {
+  nav .navbar-collapse {
+    display: flex;
+    width: 100%;
+    background-color: white;
+    justify-content: center;
+  }
+  nav .nav-item a.nav-link,
+  nav .nav-item a.nav-link.active {
+    color: black;
+  }
+}
+
+nav .nav-link {
+  font-size: 1.25rem;
+}
+nav {
+  font-family: var(--heading-fonts);
+}
+nav a.nav-link {
+  position: relative;
+}
+nav a.nav-link::before {
+  content: "";
+  width: 0%;
+  height: 0.1875rem;
+  top: 90%;
+  position: absolute;
+  background-color: var(--bg-one);
+  transition: width var(--animation-duration);
+}
+nav a.nav-link.active::before {
+  width: 80%;
+}
+.navbar-scroll {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+nav .navbar-toggler {
+  border: none;
+  margin-bottom: 0.625rem;
+}
+
+/* HOME */
+#home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  padding-top: 5.1563rem;
+}
+#home ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #110d09;
+  border-radius: 100vh;
+  color: var(--second-color);
+}
+#home ul {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+#home h1::after {
+  content: "|";
+  animation-name: typing;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-delay: 0.5s;
+}
+@keyframes typing {
+  0%,
+  56% {
+    content: "D|";
+  }
+  2%,
+  30%,
+  54% {
+    content: "De|";
+  }
+  4%,
+  28% {
+    content: "Dev|";
+  }
+  6%,
+  26% {
+    content: "Deve|";
+  }
+  8%,
+  24% {
+    content: "Devel|";
+  }
+  10%,
+  22% {
+    content: "Develo|";
+  }
+  12%,
+  20% {
+    content: "Develop|";
+  }
+  14%,
+  18% {
+    content: "Develope|";
+  }
+  32%,
+  52% {
+    content: "Des|";
+  }
+  34%,
+  50% {
+    content: "Desi|";
+  }
+  36%,
+  48% {
+    content: "Desin|";
+  }
+  38%,
+  46% {
+    content: "Desing|";
+  }
+  40%,
+  44% {
+    content: "Desinge|";
+  }
+  42% {
+    content: "Desinger|";
+  }
+  58%,
+  100% {
+    content: "|";
+  }
+  60%,
+  98% {
+    content: "L|";
+  }
+  62%,
+  97% {
+    content: "La|";
+  }
+  64%,
+  96% {
+    content: "Lar|";
+  }
+  66%,
+  95% {
+    content: "Larr|";
+  }
+  68%,
+  94% {
+    content: "Larry|";
+  }
+  70%,
+  93% {
+    content: "Larry |";
+  }
+  72%,
+  92% {
+    content: "Larry D|";
+  }
+  74%,
+  91% {
+    content: "Larry Da|";
+  }
+  76%,
+  90% {
+    content: "Larry Dan|";
+  }
+  78%,
+  88% {
+    content: "Larry Dani|";
+  }
+  80%,
+  87% {
+    content: "Larry Danie|";
+  }
+  82%,
+  86% {
+    content: "Larry Daniel|";
+  }
+  84% {
+    content: "Larry Daniels|";
+  }
+}
+/* ABOUT */
+
+#about {
+  background-color: var(--bg-one);
+}
+
+#about picture::after {
+  content: " ";
+  position: absolute;
+  width: 80%;
+  height: 90%;
+  top: 4.5625rem;
+  left: -2.0625rem;
+  background-image: url(../img/dots.png);
+  background-repeat: repeat;
+  z-index: -1;
+}
+.btn-dark {
+  --bs-btn-hover-color: var(--main-color);
+  --bs-btn-hover-bg: var(--second-color);
+  --bs-btn-hover-border-color: var(--main-color);
+}
+
+.btn {
+  --bs-btn-padding-x: 1.875rem;
+  --bs-btn-padding-y: 0.75rem;
+  transition: all 400ms;
+}
+
+/* SERVICES */
+#services {
+  background-color: var(--bg-two);
+}
+
+#services .content .icon {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--bg-two);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100vh;
+  font-size: 1.875rem;
+  transition: color var(--animation-duration),
+    background-color var(--animation-duration);
+}
+#services .content:hover .icon {
+  background-color: var(--main-color);
+  color: var(--second-color);
+}
+
+/* PORTFOLIO */
+
+#portfolio .nav-pills .nav-link.active {
+  color: black;
+  background-color: transparent;
+  font-size: 1.25rem;
+}
+#portfolio .nav-pills .nav-link span {
+  position: relative;
+}
+#portfolio .nav-pills .nav-link.active span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.1875rem;
+  top: 100%;
+  background-color: black;
+}
+#portfolio .nav-pills .nav-link span::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0.1875rem;
+  top: 100%;
+  background-color: black;
+  transition: width var(--animation-duration);
+}
+#portfolio .nav-pills .nav-link:focus span::before {
+  width: 100%;
+}
+#portfolio .nav-pills .nav-link {
+  color: black;
+  font-size: 1.25rem;
+  background-color: transparent;
+}
+
+#portfolio .layer {
+  position: absolute;
+  inset: 0.5rem;
+  transform: translateY(0.75rem);
+  background-color: var(--bg-layer);
+  opacity: 0;
+  transition: all 700ms;
+}
+
+#portfolio picture:hover .layer {
+  opacity: 1;
+  transform: translateY(0rem);
+}
+
+#portfolio picture h6 {
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  font-weight: bolder;
+
+  transition: all 700ms;
+}
+#portfolio picture .icon {
+  top: 60%;
+  left: 50%;
+  transform: translateX(-55%);
+  position: absolute;
+  opacity: 0;
+  transition: all 700ms;
+}
+
+#portfolio picture:hover .icon {
+  opacity: 1;
+  top: 50%;
+}
+#portfolio picture:hover h6 {
+  opacity: 1;
+  top: 40%;
+}
+#portfolio picture .icon button {
+  display: inline-flex;
+  width: 2.375rem;
+  height: 2.375rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  color: var(--bg-one);
+  border-radius: 100vh;
+  border: 0.0625rem solid black;
+}
+#portfolio picture .icon button:hover {
+  background-color: var(--bg-one);
+  color: var(--main-color);
+}
+#portfolio .carousel .carousel-control-next {
+  right: -17%;
+}
+#portfolio .carousel .carousel-control-prev {
+  left: -17%;
+}
+#portfolio .carousel .carousel-control-next {
+  right: -17%;
+}
+
+/* CLIENT */
+#client {
+  background-color: var(--bg-two);
+}
+#client .content img {
+  width: 100%;
+  border-radius: 50%;
+}
+#client .content picture {
+  width: 6.25rem;
+  height: 6.25rem;
+}
+
+#client .carousel-indicators [data-bs-target] {
+  width: 0.75rem;
+  height: 0.75rem;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-inline: 0.5rem;
+  background-color: #d6d6d6;
+  opacity: 0.5;
+  transition: opacity 0s;
+}
+#client .carousel-indicators .active[data-bs-target] {
+  opacity: 0.9;
+  background-color: #869791;
+}
+/* TARGETs */
+.target {
+  background-color: var(--bg-one);
+}
+.target p {
+  font-weight: bolder;
+}
+
+/* TEAM */
+#team {
+  background-color: var(--bg-two);
+}
+#team .layer {
+  inset: 0.5rem;
+  background-color: var(--bg-layer);
+  opacity: 0;
+  transform: scale(0.5, 0.5) rotateY(180deg);
+  transition: all var(--animation-duration);
+}
+#team .layer ul {
+  margin-bottom: 28%;
+}
+#team .layer ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.125rem;
+  height: 3.125rem;
+  background-color: #110d09;
+  border-radius: 100vh;
+  color: var(--second-color);
+  border: 0.0625rem solid black;
+  transition: color var(--animation-duration),
+    background-color var(--animation-duration);
+}
+#team .layer ul li {
+  padding-inline: 0.5rem;
+}
+#team .layer ul li:hover a {
+  background-color: var(--bg-one);
+  color: var(--main-color);
+}
+
+#team .content:hover .layer {
+  transform: scale(1, 1) rotateY(0deg);
+  opacity: 0.85;
+}
+#team .img-:hover img {
+  transform: scale(1.2);
+}
+#team .img- img {
+  transition: transform var(--animation-duration);
+}
+#team .content .text1-body {
+  background-color: var(--bg-three);
+}
+
+/* CONTACT */
+
+#contact .content .icon {
+  width: 4.375rem;
+  height: 4.375rem;
+  background-color: var(--bg-two);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100vh;
+  font-size: 1.5625rem;
+  transition: color var(--animation-duration),
+    background-color var(--animation-duration);
+}
+#contact .content:hover .icon {
+  background-color: var(--main-color);
+  color: white;
+}
+#contact a {
+  color: var(--par-color);
+  font-size: 1.125rem;
+}
+
+#contact .form-control {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--bg-two);
+  border: unset;
+  border-radius: var(--bs-border-radius);
+}
+
+#contact .form-control-fouce:focus {
+  color: var(--main-color);
+  background-color: var(--bg-two);
+  border-color: transparent;
+  outline: 0;
+  box-shadow: none;
+}
+#contact textarea {
+  min-height: 7.5rem;
+  max-height: 10rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--main-color);
+  color: var(--par-color);
+}
